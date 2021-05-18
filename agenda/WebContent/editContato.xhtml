@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Agenda JSF</title>
+</h:head>
+
+<h:body>
+	<h:form id="formEditContato">
+
+		<h1>Editar Contato</h1>
+
+		<fieldset>
+			<legend> Identificação do Contato a ser alterado</legend>
+				<h:panelGrid columns="2">
+					<h:outputLabel value="ID:" />
+					<h:inputText id="inputEditId" value="#{contatoBean.contBeanId}"></h:inputText>
+				</h:panelGrid>
+		</fieldset>
+		
+		<fieldset>
+			<legend> Novos dados para o Contato</legend>
+				<h:panelGrid columns="2">
+					<h:outputLabel value="Nome: " />
+					<h:inputText id="inputEditNome" value="#{contatoBean.contBeanNome}"></h:inputText>
+					<h:outputLabel value="Telefone: " />
+					<h:inputText id="inputEditFone" value="#{contatoBean.contBeanFone}"></h:inputText>
+					<h:outputLabel value="E-mail: " />
+					<h:inputText id="inputEditMail" value="#{contatoBean.contBeanMail}"></h:inputText>				
+				</h:panelGrid>
+		</fieldset>
+				
+		<h:commandButton value="Alterar" action="#{contatoBean.editarContatoBean}" />
+		<h:commandButton value="Voltar" action="index.jsf" />
+	</h:form>
+</h:body>
+</html>

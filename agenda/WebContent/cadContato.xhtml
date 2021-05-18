@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Agenda JSF</title>
+</h:head>
+
+<h:body>
+	<h:form id="formCadContato">
+
+		<h1>Cadastro de Contato</h1>
+
+		<fieldset>
+			<legend> Dados do Contato</legend>
+				<h:panelGrid columns="2">
+					<h:outputLabel value="Nome:" />
+					<h:inputText id="inputNomeContato" value="#{contatoBean.contBeanNome}"></h:inputText>
+					<h:outputLabel value="Telefone:" />
+					<h:inputText id="inputFoneContato" value="#{contatoBean.contBeanFone}"></h:inputText>
+					<h:outputLabel value="E-mail:" />
+					<h:inputText id="inputMailContato" value="#{contatoBean.contBeanMail}"></h:inputText>
+				</h:panelGrid>
+		</fieldset>
+		<br />
+		<h:commandButton value="Cadastrar" action="#{contatoBean.gravarContatoBean}" />
+		<h:commandButton value="Voltar" action="index.jsf" />
+		<br />
+
+	</h:form>
+</h:body>
+</html>
